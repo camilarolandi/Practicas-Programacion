@@ -1,0 +1,77 @@
+/* POSITION
+z-index:1 (x defecto) se lo doy al elemento q quiero q este por arriba. eje z es perpendicular a los elementos
+Relative: respeta la distancia entre hijos. hace el espacio.
+Absolute: empieza del 0,0 del body deberia logar que empiece del 0,0 del padre, para eso al padre le doy otra posicion q no sea static  (normalmente relative) Primero le doy al hijo position absolute, luego al padre position y un ancho y le digo al hijo q lo siga (width:100%). PARA QUE QUEDE CENTRADO: Combino con display flex al padre y lo alineo y de ahi al hijo le doy un right o left  */
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.padre{
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(253, 148, 72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    margin: 200px 0;
+    position: relative;
+
+
+}
+
+
+.hijo{
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(3, 3, 3);
+}
+
+
+.hijo:nth-child(1){
+    background-color: rgb(151, 151, 233);
+}
+
+.hijo:nth-child(2){
+    background-color: rgb(226, 43, 180);
+    position: absolute;
+    top:0px;
+    left: 0px;
+    
+
+}
+
+.hijo:nth-child(3){
+    background-color: rgb(57, 255, 57);
+
+}
+
+.contenedor{ /* PADRE */
+position: relative; /* para q el circulo rojo este dentro del contenedor, si le doy top 0 y no position distinta a static en el padre el circulo se va al 0,0 del body */
+width: 300px; /* bajo el tamaño al padre */
+display: flex;
+align-items: center;
+}
+
+.contenedor input{
+width: 100%; /* 100% del padre (en este caso es 300px) */
+}
+
+
+.contenedor .lupita{
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    right:5px; /* le doy el right/left cuando ya acomode todo */
+
+
+
+
+}

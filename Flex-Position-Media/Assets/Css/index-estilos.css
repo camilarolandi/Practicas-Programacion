@@ -1,0 +1,53 @@
+
+
+
+
+
+:root{
+    --circle-size:300px;
+    --caja-size-w: 500px;
+    --caja-size-h:60px;
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+    
+.caja{ /* div */
+
+    width: var(--caja-size-w);
+    height: var(--caja-size-h);
+    background-color: rgb(206, 196, 196);
+    margin: 10px;
+    border: 2px solid rgb(0, 88, 129);
+    border-radius: 5px;
+    position: relative; 
+    display: flex;
+    align-items: center
+    ;
+}
+
+
+.caja .btn{
+
+
+}
+
+
+
+.caja .btn .nube{
+
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 100%;
+    position: absolute;
+  
+
+
+}
