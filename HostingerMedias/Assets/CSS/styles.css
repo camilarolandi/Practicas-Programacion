@@ -6,7 +6,10 @@
 
 :root{
     --ff-primary:"DM Sans", sans-serif;
-    --fs-textos: 20px;
+    --fc-primary:#ffffff;
+    --bc-primary:#673DE6;
+    --bc-opbox: #5025D1;
+    
 }
 
 *{
@@ -14,156 +17,151 @@
     margin: 0;
     box-sizing: border-box;
     font-family: var(--ff-primary);
+    
+
 
 }
 
-body{
-    background-color: #673DE6;
-}
-main{
 
-height: 100vh;
-width: 100vw; 
-}
-
+/* contenedor de foto, texto y opiniones (TODO) */
 
 .foto-texto-opiniones{
-    
-
-
-}
-
-
-.foto-texto-opiniones .foto-texto{
-
+    background-color: var(--bc-primary);
+    padding: 60px;
     display: flex;
-    justify-content: space-between;
-    padding: 100px;
-    gap:50px;
-    width: 100%;
-    
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+
 }
 
+/* Parte de arriba: foto, titulo, checks y texto */
+.foto-texto-opiniones .foto-texto{
+    width: 100%;
+    max-width: 1025px;
+    display: flex;
+    
+
+    
+}
 
 .foto-texto-opiniones .foto-texto .cont-foto{
-
-}
-
-.foto-texto-opiniones .foto-texto .cont-foto .chica-foto{ /* cambia el tamaño con el cambio en el tamaño del display */
-    width: 600x;
-    height: 500px;
-}
-
-
-.foto-texto-opiniones .sitio-seguro{
-
-
-}
-
-
-h2{ /* font-size cambia cuando cambia el tamaño del display */
-color: #FFFFFF;
-font-size: 36px;
-
-
-}
-
-
-.foto-texto-opiniones .sitio-seguro .cont-text-icon{
-
-
-
-
-}
-
-.foto-texto-opiniones .sitio-seguro .cont-text-icon .texto-icon{
+    width: 100%;
+    padding: 5px;
     display: flex;
-    gap: 15px;
-    padding: 20px 0;
-
-}
-
-.foto-texto-opiniones .sitio-seguro .cont-text-icon .check{
-    color: white;
-    font-weight: bold;
-
+    align-items: center;
 }
 
 
-
-
-.foto-texto-opiniones .sitio-seguro .cont-text-icon .texto{
-    font-size: var(--fs-textos);
-    color:#FFFFFF;
+.foto-texto-opiniones .foto-texto .cont-foto .chica-foto{ /* foto de la chica */
+    width: 100%;
+}
     
 
-}
-
-
-
-/* PARTE INFERIOR: CUADRITOS VIOLETA OSCURO */
-
-.opiniones {
-padding: 100px;
-display: flex;
-justify-content: space-between;
-}
-
-.opiniones .opi-icon{
-    width: 400px;
-    height: 320px;
-    background-color: #5025D1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;   
-    padding: 20px;
-
-
-
-}
-
-
-
-.opiniones .opi-icon .nombre-opi{
+.foto-texto-opiniones .foto-texto .sitio-seguro{ /* titulo, checks y texto */
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding:5px;
+}
+
+h2{ /* titulo */
+
+    font-size: 2.5rem; /* quiero que sea de 40px y se q 1rem= 16px */
+    color: var(--fc-primary);
+    font-weight: bold;
+}
+
+.foto-texto-opiniones .foto-texto .sitio-seguro .cont-text-icon{ /* contenedor de titulos y checks */
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+
+    
+}
+
+.foto-texto-opiniones .foto-texto .sitio-seguro .cont-text-icon .texto-icon{  /* contiene cada titulo con su icono */
+    display: flex;
+    gap:15px;
+
+    
+}
+
+.foto-texto-opiniones .foto-texto .sitio-seguro .cont-text-icon .texto-icon .check{  /* check*/
+    color: var(--fc-primary);
+}
+
+.foto-texto-opiniones .foto-texto .sitio-seguro .cont-text-icon .texto-icon .texto{  /* texto*/
+    color: var(--fc-primary);
+    
+}
+
+
+
+
+
+
+
+/* section 2: contiene cada cajita violeta oscuro (3) */
+.foto-texto-opiniones .opiniones { /* contiene todas las opiniones, nombre y flecha. Contiene cada CAJA VIOLETA*/
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    width: 100%;
+    max-width: 1025px;
 
 
 }
 
 
-.opiniones .opi-icon .nombre-opi .opi{
+.foto-texto-opiniones .opiniones .opi-icon{ /* cada caja violeta oscuro */
+    background-color: var(--bc-opbox) ; 
+    width: 100%;
+    padding: 5px;
+}
+
+.foto-texto-opiniones .opiniones .opi-icon .nombre-opi{ /* contiene nombre y opinion */
+    width: 100%;
+    padding: 5px;
 
 
 
 }
 
-.opiniones .opi-icon .nombre-opi{
+.foto-texto-opiniones .opiniones .opi-icon .nombre-opi .nombre{ /* foto del nombre */
+    width: 250px;
 
-font-size: var(--fs-textos);
-color: #FFFFFF;
+}
+.foto-texto-opiniones .opiniones .opi-icon .nombre-opi .opi{ /*opinion */
+    color: var(--fc-primary);
+    padding-bottom: 5px;
+    width: 100%;
 
+}
+
+.foto-texto-opiniones .opiniones .opi-icon .flecha{ /* contiene la flecha */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+
+.foto-texto-opiniones .opiniones .opi-icon .flecha .flecha-icon{ /* flecha */
+    color: var(--fc-primary);
 
 }
 
 
-.opiniones .opi-icon .flecha{
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: end;
+@media screen and (max-width:1024px){
+    
+    .foto-texto-opiniones .opiniones{
+        flex-direction: column;
 
+    }
 
-
-}
-
-
-
-.opiniones .opi-icon .flecha .flecha-icon{
-color: #FFFFFF;
-font-weight: bold;
-width: 24px;
-height: 24px;
+    .foto-texto-opiniones .foto-texto{
+        flex-direction: column-reverse;
+    }
 
 }
