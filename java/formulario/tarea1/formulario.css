@@ -1,0 +1,35 @@
+
+
+
+.form{
+display: flex;
+flex-direction: column;
+
+
+}
+
+.form .contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:20px;
+    gap:10px;
+
+
+}
+
+
+.form .contenedor .input{
+    display: flex;
+    flex-direction: row;
+    margin-top:20px;
+    gap:10px;
+
+
+}
+
+
+.btn-submit{
+    margin:5px;
+    background-color: coral;
+}
