@@ -1,0 +1,50 @@
+
+
+
+body{
+    background-color: #202020;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.contenedor-imagenes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:30px;
+    max-width: 500px;
+    min-width: 500px;
+
+}
+
+.contenedor-imagenes .imagen{
+   width: 100%;
+   height: 100%;
+   transition: all 0.5s;
+}
+
+.contenedor-imagenes .imagen:hover{
+    filter: grayscale(1);
+    transition: all 0.5s;
+}
+  
+
+
+
+.caja{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: all 0.5s;
+}
+
+.caja:hover{
+    background-color: rgb(30, 255, 0);
+    transition: all 0.5s;
+}
